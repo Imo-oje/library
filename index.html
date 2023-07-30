@@ -15,7 +15,52 @@
       <h1 class="logo">Library</h1>
       <button class="add-book"><i class="fa fa-plus"></i>Add book</button>
     </header>
-    <main class="books_container"></main>
+    <main class="book_container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </main>
+    <div class="form">
+      <form action="post">
+        <legend>New Book</legend>
+        <div class="title">
+          <label for="title">Book title</label>
+          <input type="text" id="title" placeholder="Title" required />
+        </div>
+        <div class="author">
+          <label for="author">Book author</label>
+          <input type="text" id="author" placeholder="Author" required />
+        </div>
+        <div class="pages">
+          <label for="pages">pages</label>
+          <input
+            type="text"
+            id="pages"
+            placeholder="Number of pages"
+            required
+          />
+        </div>
+        <div class="date">
+          <label for="date">Published date</label>
+          <input type="date" id="date" required />
+        </div>
+        <div class="check">
+          <label for="checkbox">I have read this book</label>
+          <input id="checkbox" type="checkbox" checked />
+        </div>
+        <div class="button">
+          <button class="submit">Add</button>
+          <button class="reset" type="reset">clear</button>
+        </div>
+      </form>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

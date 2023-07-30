@@ -9,6 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  user-select: none;
 }
 
 .header {
@@ -32,7 +33,6 @@ button.add-book {
   height: 40px;
   font-size: 15px;
   background: rgb(182, 174, 174);
-  border-radius: 10px;
   justify-self: end;
   outline: none;
   border: none;
@@ -46,4 +46,101 @@ button.add-book:hover {
 
 button.add-book i {
   margin-right: 10px;
+}
+/* END OF HEADER */
+
+main.book_container {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.book_container div {
+  height: 250px;
+  background: red;
+  text-align: center;
+}
+
+/*  FORM STARTS HERE */
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  border: 1px solid black;
+  padding: 20px;
+  height: auto;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(245, 245, 220);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 250px;
+}
+
+form legend {
+  text-align: center;
+  font: 2rem;
+  font-weight: 700;
+}
+
+form input {
+  width: 250px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: rgb(182, 174, 174);
+}
+
+form .check {
+  position: relative;
+  cursor: pointer;
+  width: 170px;
+}
+
+form .check input {
+  position: absolute;
+  top: -5px;
+  left: 155px;
+  width: 15px;
+}
+
+form .button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .button button {
+  height: 30px;
+  outline: none;
+  border: none;
+}
+
+form .button button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+form .button .submit {
+  width: 150px;
+  background: green;
+}
+
+form .button .reset {
+  width: 80px;
+  background: red;
+}
+
+.form .close {
+  z-index: 9999;
 }
