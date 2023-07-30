@@ -67,13 +67,19 @@ main.book_container {
 .form {
   position: absolute;
   top: 50%;
-  left: 75%;
+  left: 50%;
   border: 1px solid black;
   padding: 20px;
   height: auto;
   width: 300px;
+  display: none;
   transform: translate(-50%, -50%);
   background-color: rgb(245, 245, 220);
+  user-select: none;
+}
+
+.show {
+  display: block;
 }
 
 form {
@@ -83,6 +89,7 @@ form {
   font-weight: 400;
   margin: 0 auto;
   width: 250px;
+  margin-top: 15px;
 }
 
 form legend {
@@ -143,4 +150,8 @@ form .button .reset {
 
 .form .close {
   z-index: 9999;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
 }
