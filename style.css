@@ -1,5 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: grid;
+  padding: 15px;
+  align-items: center;
+  user-select: none;
+  background: rebeccapurple;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 400;
+  justify-self: start;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+button.add-book {
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+  background: rgb(182, 174, 174);
+  border-radius: 10px;
+  justify-self: end;
+  outline: none;
+  border: none;
+}
+
+button.add-book:hover {
+  cursor: pointer;
+  background: rgb(245, 245, 220);
+  transition: background 300ms ease;
+}
+
+button.add-book i {
+  margin-right: 10px;
 }
