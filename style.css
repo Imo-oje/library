@@ -56,7 +56,7 @@ main.book_container {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
-.book_container div {
+.books {
   height: 250px;
   background: red;
   text-align: center;

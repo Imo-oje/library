@@ -19,21 +19,13 @@
       <h1 class="logo">Library</h1>
       <button class="add-book"><i class="fa fa-plus"></i>Add book</button>
     </header>
-    <main class="book_container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-    </main>
+    <!-- ======BOOK CONTAINER HERE=====-->
+    <main class="book_container"></main>
+
+    <!-- FORM STARTS HERE -->
     <div class="form">
       <span class="material-symbols-sharp || close"> close </span>
-      <form action="post">
+      <form action="get">
         <legend>New Book</legend>
         <div class="title">
           <label for="title">Book title</label>
@@ -54,14 +46,18 @@
         </div>
         <div class="date">
           <label for="date">Published date</label>
-          <input type="date" id="date" required />
+          <input type="date" id="date" name="date" />
+        </div>
+        <div class="image">
+          <label for="image">Upload image</label>
+          <input type="file" name="image" id="image" />
         </div>
         <div class="check">
           <label for="checkbox">I have read this book</label>
           <input id="checkbox" type="checkbox" checked />
         </div>
         <div class="button">
-          <button class="submit">Add</button>
+          <button type="button" class="submit">Add</button>
           <button class="reset" type="reset">clear</button>
         </div>
       </form>
