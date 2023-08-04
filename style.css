@@ -53,13 +53,7 @@ main.book_container {
   display: grid;
   gap: 4px;
   padding: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-
-.books {
-  height: 250px;
-  background: red;
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /*  FORM STARTS HERE */
@@ -140,12 +134,12 @@ form .button button:hover {
 
 form .button .submit {
   width: 150px;
-  background: green;
+  background: #53f153;
 }
 
 form .button .reset {
   width: 80px;
-  background: red;
+  background: #e23030;
 }
 
 .form .close {
@@ -153,5 +147,66 @@ form .button .reset {
   position: absolute;
   top: 15px;
   right: 15px;
+  cursor: pointer;
+}
+
+/* FOR BOOKS NOW */
+
+/* making a card */
+
+.book-card {
+  background: #999;
+  height: 250px;
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.book-card .top {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.book-card .author-name,
+.book-card .book-title,
+.book-card .book-date,
+.book-card .book-pages,
+.book-card .button {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* .title-container {
+  
+} */
+
+.book-card .book-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.book-card .book-date {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.book-card .book-pages {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.book-card button {
+  width: 100px;
+  height: 30px;
+  /* border-radius: 10px; */
+  border: none;
+  outline: none;
+  margin-top: 5px;
   cursor: pointer;
 }

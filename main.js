@@ -10,33 +10,45 @@ toggleForm.map((item) => {
   });
 });
 
-// MAIN //
+const addBook = document.querySelector(".submit");
 
-function setbook(title, author, pages, date, image) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.date = date;
-  this.image = image;
+const selectInput = document.querySelectorAll("input");
+const inputs = Array.from(selectInput);
+
+function bookFactory(title, author, pages, date, status) {
+  return { title, author, pages, date, status };
 }
 
-const addBook = document.querySelector(".submit");
 addBook.addEventListener("click", () => {
-  const book = new setbook(
-    document.querySelector('#title').value,
-    document.querySelector("#author").value,
-    document.querySelector("#pages").value,
-    document.querySelector("#date").value,
-    "image"
-  );
-  const books = document.createElement("div");
-  books.classList.add("books");
-  books.innerHTML = `
-    <span>${book.title}</span>
-    <h2>${book.author}</h2>
-    <span>${book.pages}</span>
-    <button class="book-status">${book.read}</button>
-  `;
+  const checkBox = document.querySelector("input[type='checkbox").checked;
 
-  bookContainer.appendChild(books);
+  const book = bookFactory(
+    inputs[0].value,
+    inputs[1].value,
+    inputs[2].value,
+    inputs[3].value,
+    checkBox
+  );
+  console.log(checkBox);
+  console.log(book.date); //inputs.indexOf(input)), input
+
+  const div = document.createElement("div");
+  div.innerHTML = `
+  <div class="book-card">
+    <div class="top">
+      <p class="book-date">published: ${book.date}</p>
+      <p class="book-pages">${book.pages} pages</p>
+    </div>
+    <div>
+      <h3 class="author-name">${book.author}</h3>
+      <div class="title-container">
+        <h2 class="book-title">${book.title}</h2>
+      </div>
+      <button style="background: ${
+        checkBox ? "#53f153" : "#e23030"
+      };" class="button" id='button' >${checkBox ? "Read" : "Not read"}</button>
+    </div>
+</div>
+  `;
+  bookContainer.appendChild(div);
 });
